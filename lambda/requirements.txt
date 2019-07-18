@@ -1,0 +1,4 @@
+python-dateutil
+fluent-logger
+aws_kinesis_agg
+aws-xray-sdk
