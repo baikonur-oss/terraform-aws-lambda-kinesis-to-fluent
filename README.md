@@ -50,7 +50,7 @@ resource "aws_kinesis_stream" "stream" {
 }
 
 module "fluent" {
-  source  = "baikonur-oss/lambda-kinesis-to-s3/aws"
+  source  = "baikonur-oss/lambda-kinesis-to-fluent/aws"
   version = "1.0.0"
 
   lambda_package_url = "https://github.com/baikonur-oss/terraform-aws-lambda-kinesis-fluent/releases/download/v1.0.0/lambda_package.zip"
