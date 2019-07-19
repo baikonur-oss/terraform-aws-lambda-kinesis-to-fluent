@@ -35,8 +35,8 @@ variable "security_group_ids" {
   type        = "list"
 }
 
-variable "fluent_target_url" {
-  description = "Target Fluent endpoint URL"
+variable "fluent_sink_endpoint" {
+  description = "Target Fluent sink endpoint (IP or hostname)"
 }
 
 variable "fluent_tag" {

@@ -93,8 +93,8 @@ For more information on module version pinning, see [Selecting a Revision](https
 | batch\_size | Maximum number of records passed for a single Lambda invocation | string | n/a | yes |
 | failed\_log\_s3\_bucket | S3 bucket name for saving failed logs (ES API errors etc.) | string | n/a | yes |
 | failed\_log\_s3\_prefix | Path prefix for failed logs | string | n/a | yes |
+| fluent\_sink\_endpoint | Target Fluent sink endpoint (IP or hostname) | string | n/a | yes |
 | fluent\_tag | Second-level fluent tag name (first level is log type) | string | n/a | yes |
-| fluent\_target\_url | Target Fluent endpoint URL | string | n/a | yes |
 | handler | Lambda Function handler (entrypoint) | string | `"main.handler"` | no |
 | kinesis\_stream\_arn | Source Kinesis Data Streams stream name | string | n/a | yes |
 | lambda\_package\_url | Lambda package URL (see Usage in README) | string | n/a | yes |

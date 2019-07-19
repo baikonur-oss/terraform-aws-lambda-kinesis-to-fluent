@@ -46,10 +46,10 @@ resource "aws_lambda_function" "function" {
       LOG_TIMESTAMP_FIELD     = "${var.log_timestamp_field}"
       LOG_TYPE_WHITELIST      = "${join(",", var.log_type_field_whitelist)}"
 
-      LOG_FLUENT_TARGET_URL = "${var.fluent_target_url}"
-      LOG_FLUENT_TAG        = "${var.fluent_tag}"
-      FAILED_LOG_S3_BUCKET  = "${var.failed_log_s3_bucket}"
-      FAILED_LOG_S3_PREFIX  = "${var.failed_log_s3_prefix}"
+      LOG_FLUENT_SINK_ENDPOINT = "${var.fluent_sink_endpoint}"
+      LOG_FLUENT_TAG           = "${var.fluent_tag}"
+      FAILED_LOG_S3_BUCKET     = "${var.failed_log_s3_bucket}"
+      FAILED_LOG_S3_PREFIX     = "${var.failed_log_s3_prefix}"
     }
   }
   vpc_config {

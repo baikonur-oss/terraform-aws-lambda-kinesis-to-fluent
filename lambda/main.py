@@ -38,7 +38,7 @@ LOG_TIMESTAMP_FIELD: str = os.environ['LOG_TIMESTAMP_FIELD']
 LOG_TYPE_FIELD_WHITELIST: set = set(str(os.environ['LOG_TYPE_WHITELIST']).split(','))
 LOG_TYPE_UNKNOWN_PREFIX: str = os.environ['LOG_TYPE_UNKNOWN_PREFIX']
 
-LOG_FLUENT_TARGET_URL = os.environ['LOG_FLUENT_TARGET_URL']
+LOG_FLUENT_SINK_ENDPOINT = os.environ['LOG_FLUENT_SINK_ENDPOINT']
 LOG_FLUENT_TAG = os.environ['LOG_FLUENT_TAG']  # second-level tag
 
 
@@ -177,8 +177,8 @@ def send_by_type(log_dict: dict):
         record_list = log_dict[log_type]['records']
         logger.debug(record_list)
 
-        logger.info(f"Connecting to fluentd endpoint {LOG_FLUENT_TARGET_URL} with top-level tag {log_type}")
-        fluentd = connect_fluentd(LOG_FLUENT_TARGET_URL, log_type)
+        logger.info(f"Connecting to fluentd endpoint {LOG_FLUENT_SINK_ENDPOINT} with top-level tag {log_type}")
+        fluentd = connect_fluentd(LOG_FLUENT_SINK_ENDPOINT, log_type)
         # on connection error an exception is raised by fluent-sender
         # and lambda is terminated with "failed" status (as expected)
 
