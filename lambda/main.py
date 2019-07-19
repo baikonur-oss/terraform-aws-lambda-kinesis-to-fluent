@@ -40,7 +40,7 @@ LOG_TYPE_FIELD_WHITELIST: set = set(str(os.environ['LOG_TYPE_WHITELIST']).split(
 LOG_TYPE_UNKNOWN_PREFIX: str = os.environ['LOG_TYPE_UNKNOWN_PREFIX']
 
 LOG_FLUENT_TARGET_URL = os.environ['LOG_FLUENT_TARGET_URL']
-LOG_FLUENT_TAG = os.environ['LOG_FLUENT_TARGET_URL']  # second-level tag
+LOG_FLUENT_TAG = os.environ['LOG_FLUENT_TAG']  # second-level tag
 
 
 def append_to_dict(dictionary: dict, log_type: str, log_data: object, log_timestamp=None):
