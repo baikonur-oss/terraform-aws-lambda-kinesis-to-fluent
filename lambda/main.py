@@ -28,7 +28,6 @@ patch(libraries)
 
 # global client instances
 s3 = boto3.client('s3')
-os.environ['TZ'] = "Asia/Tokyo"
 
 # configure with env vars
 FAILED_LOG_S3_BUCKET = os.environ['FAILED_LOG_S3_BUCKET']
