@@ -1,4 +1,4 @@
 python-dateutil
 fluent-logger
 aws_kinesis_agg==1.1.2
-aws-xray-sdk
+aws-xray-sdk==2.4.3
